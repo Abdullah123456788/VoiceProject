@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VoiceTyping"
+    android:background="@color/gray">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarvt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title="Voice Typing"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/arrow_back_20px"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+    <Spinner
+        android:id="@+id/spiner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:entries="@array/Language"
+        app:layout_constraintBottom_toTopOf="@+id/textbox1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarvt"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textbox1"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="60dp"
+        android:paddingStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarvt"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <Button
+        android:id="@+id/btncopy"
+        android:background="@drawable/content_copy_20px"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnpaste"
+        app:layout_constraintTop_toBottomOf="@+id/textbox1"
+        />
+
+    <Button
+        android:id="@+id/btnpaste"
+        android:background="@drawable/content_paste_20px"
+        android:layout_width="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btncopy"
+        app:layout_constraintEnd_toStartOf="@id/btndelete"
+        app:layout_constraintTop_toBottomOf="@id/textbox1"/>
+
+    <Button
+        android:id="@+id/btndelete"
+        android:background="@drawable/delete_20px"
+        android:layout_width="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btnpaste"
+        app:layout_constraintEnd_toStartOf="@id/share"
+        app:layout_constraintTop_toBottomOf="@id/textbox1"
+        />
+
+    <Button
+        android:id="@+id/share"
+        android:background="@drawable/share_20px"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/btndelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textbox1"
+
+        />
+    <Button
+        android:id="@+id/btnmic"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/mic_20px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textbox1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap To Speak"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnmic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VoiceTyping"
+    android:background="@color/gray">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarvt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:title="Voice Translation"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/arrow_back_20px"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+    <ImageView
+        android:id="@+id/flagimage"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/usa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/spiner"
+        app:layout_constraintTop_toBottomOf="@id/toolbarvt"
+
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spiner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:entries="@array/Language"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/textbox1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="@id/textbox1"
+        app:layout_constraintTop_toBottomOf="@id/toolbarvt"
+        app:layout_constraintVertical_bias="0.062"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+
+        android:id="@+id/textbox1"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:paddingVertical="60dp"
+        android:paddingStart="20dp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarvt"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <Button
+        android:id="@+id/btntranslate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:text="Translate"
+        app:layout_constraintBottom_toTopOf="@id/spiner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textbox1"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/flagimage2"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="205dp"
+        android:background="@drawable/usa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/spiner2"
+        app:layout_constraintTop_toBottomOf="@id/btntranslate"
+
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spiner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/Language"
+        app:layout_constraintBottom_toTopOf="@+id/textbox2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="70dp"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textbox1"
+        app:layout_constraintVertical_bias="0.062"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textbox2"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingVertical="60dp"
+        android:paddingStart="20dp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/textbox1"
+        app:layout_constraintTop_toBottomOf="@+id/textbox1"
+        app:layout_constraintVertical_bias="0.092" />
+    <Button
+        android:id="@+id/btncopy"
+        android:background="@drawable/content_copy_20px"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnpaste"
+        app:layout_constraintTop_toBottomOf="@+id/textbox2"
+        />
+
+    <Button
+        android:id="@+id/btnpaste"
+        android:background="@drawable/content_paste_20px"
+        android:layout_width="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btncopy"
+        app:layout_constraintEnd_toStartOf="@id/btndelete"
+        app:layout_constraintTop_toBottomOf="@id/textbox2"/>
+
+    <Button
+        android:id="@+id/btndelete"
+        android:background="@drawable/delete_20px"
+        android:layout_width="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btnpaste"
+        app:layout_constraintEnd_toStartOf="@id/share"
+        app:layout_constraintTop_toBottomOf="@id/textbox2"
+        />
+
+    <Button
+        android:id="@+id/share"
+        android:background="@drawable/share_20px"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@id/btndelete"
+        app:layout_constraintEnd_toStartOf="@+id/btnspeak"
+        app:layout_constraintTop_toBottomOf="@id/textbox2"
+
+        />
+
+    <Button
+        android:id="@+id/btnspeak"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/volume_up_24px"
+        app:layout_constraintStart_toEndOf="@id/share"
+        app:layout_constraintTop_toBottomOf="@id/textbox2" />
+
+    <Button
+        android:id="@+id/btnmic"
+        android:layout_width="80dp"
+        android:layout_height="55dp"
+        android:background="@drawable/mic_20px"
+        android:layout_marginTop="95dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textbox1"
+        app:layout_constraintEnd_toEndOf="@id/textbox1"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@id/textbox1"
+        app:layout_constraintTop_toTopOf="@+id/textbox1"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VoiceProject</string>
+    <string-array name="Language">
+        <item>English</item>
+        <item>Hindi</item>
+        <item>Urdu</item>
+        <item>Chinese</item>
+        <item>Japanese</item>
+    </string-array>
+</resources>
