@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".VoiceTyping"
     android:background="@color/gray">
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarvt"
         android:layout_width="match_parent"

@@ -66,7 +66,6 @@ class VoiceTranslation : AppCompatActivity() {
         btntranslate = findViewById(R.id.btntranslate)
         btnpaste = findViewById(R.id.btnpaste)
         btnspeak = findViewById(R.id.btnspeak)
-
         toolbarvt.setNavigationOnClickListener()
         {
             val intent = Intent(this, MainActivity::class.java)
